@@ -2,9 +2,9 @@
 
 int main()
 {
-    hayai::ConsoleOutputter consoleOutputter;
+    hayai::PropertytreeOutputter jsonOutputter;
 
-    hayai::Benchmarker::AddOutputter(consoleOutputter);
+    hayai::Benchmarker::AddOutputter(jsonOutputter);
     hayai::Benchmarker::RunAllTests();
     return 0;
 }

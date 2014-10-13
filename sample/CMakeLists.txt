@@ -15,6 +15,12 @@ add_executable(sample
   delivery_man_sleep.cpp
 )
 
+target_include_directories(
+  sample
+  PUBLIC
+  ${Boost_INCLUDE_DIR}
+)
+
 target_link_libraries(sample
   hayai_main
   ${LIB_TIMING}

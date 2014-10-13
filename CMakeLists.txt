@@ -3,6 +3,15 @@
 project(hayai)
 cmake_minimum_required(VERSION 2.4)
 
+#try to find boost
+find_package(
+  Boost
+)
+if (Boost_FOUND)
+  add_definitions(-DBoost_FOUND)
+endif (Boost_FOUND)
+
+
 # Offer the user the choice of overriding the installation directories.
 set(INSTALL_LIB_DIR lib CACHE PATH "Installation directory for libraries")
 set(INSTALL_BIN_DIR bin CACHE PATH "Installation directory for executables")

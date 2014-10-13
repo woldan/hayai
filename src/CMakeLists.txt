@@ -2,6 +2,7 @@ file(GLOB hayai_headers
   hayai_benchmarker.hpp
   hayai_console.hpp
   hayai_console_outputter.hpp
+  hayai_propertytree_outputter.hpp
   hayai_fixture.hpp
   hayai.hpp
   hayai_outputter.hpp
@@ -13,6 +14,12 @@ add_library(hayai_main
 
 set_target_properties(hayai_main PROPERTIES
   PUBLIC_HEADER "${hayai_headers}"
+)
+
+target_include_directories(
+  hayai_main
+  PUBLIC
+  ${Boost_INCLUDE_DIR}
 )
 
 install(

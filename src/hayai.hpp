@@ -6,6 +6,9 @@
 #include "hayai_default_test_factory.hpp"
 #include "hayai_fixture.hpp"
 #include "hayai_console_outputter.hpp"
+#ifdef Boost_FOUND
+#include "hayai_propertytree_outputter.hpp"
+#endif
 
 
 #define BENCHMARK_CLASS_NAME_(fixture_name, benchmark_name) \
